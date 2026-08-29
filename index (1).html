@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glitters & Glam-Pro Makeup Studio & Beauty Salon | Lucknow</title>
+
+<meta name="description" content="Glitters & Glam-Pro Makeup Studio & Beauty Salon in Mahanagar, Lucknow. Professional makeup, bridal makeup, hair styling, hair spa and beauty services.">
+<meta name="keywords" content="Glitters and Glam Lucknow, makeup artist Mahanagar Lucknow, bridal makeup Lucknow, beauty salon Mahanagar, makeup studio Lucknow">
+
+<meta name="theme-color" content="#0a0808">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#d7ad62;
+    --gold-light:#f4d99b;
+    --black:#080707;
+    --dark:#100d0d;
+    --dark2:#171212;
+    --cream:#f7f0e4;
+    --text:#f7f3ed;
+    --muted:#aaa09a;
+    --line:rgba(215,173,98,.22);
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-padding-top:85px;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:var(--black);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body.modal-open{
+    overflow:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    transition:.35s ease;
+}
+
+header.scrolled{
+    background:rgba(8,7,7,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:.8px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:13px;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-cta{
+    border:1px solid var(--gold);
+    padding:11px 18px;
+    color:var(--gold)!important;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(90deg,
+        rgba(5,4,4,.98) 0%,
+        rgba(5,4,4,.91) 35%,
+        rgba(5,4,4,.58) 65%,
+        rgba(5,4,4,.28) 100%
+    ),
+    url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    right:-250px;
+    top:80px;
+    background:radial-gradient(circle,rgba(215,173,98,.22),transparent 65%);
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    padding-top:65px;
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(58px,8vw,104px);
+    line-height:.86;
+    font-weight:600;
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-subtitle{
+    max-width:610px;
+    color:#c7c0bb;
+    line-height:1.85;
+    font-size:16px;
+    margin-top:28px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+    margin-top:34px;
+}
+
+.btn{
+    min-height:50px;
+    padding:14px 24px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#090707;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(215,173,98,.18);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.3);
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+.hero-proof{
+    margin-top:40px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.stars{
+    color:var(--gold);
+    letter-spacing:3px;
+    font-size:15px;
+}
+
+.hero-proof strong{
+    font-size:22px;
+}
+
+.hero-proof small{
+    color:#888;
+    font-size:12px;
+}
+
+.hero-scroll{
+    position:absolute;
+    bottom:30px;
+    right:4%;
+    writing-mode:vertical-rl;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:#777;
+    font-size:10px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:105px 0;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:13px;
+}
+
+.section-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(44px,5vw,68px);
+    line-height:.95;
+    font-weight:600;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+.section-desc{
+    color:#999;
+    line-height:1.85;
+    max-width:650px;
+    margin-top:17px;
+}
+
+.center{
+    text-align:center;
+}
+
+.center .section-desc{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:
+    radial-gradient(circle at 90% 20%,rgba(215,173,98,.07),transparent 25%),
+    #0e0c0c;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:75px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+    min-height:570px;
+    overflow:hidden;
+}
+
+.about-image img{
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.78);
+}
+
+.about-image::before{
+    content:"";
+    position:absolute;
+    inset:20px;
+    border:1px solid var(--gold);
+    z-index:2;
+    pointer-events:none;
+}
+
+.about-image::after{
+    content:"GLITTERS & GLAM";
+    position:absolute;
+    bottom:35px;
+    left:35px;
+    color:white;
+    font-family:"Cormorant Garamond",serif;
+    font-size:26px;
+    letter-spacing:3px;
+    z-index:3;
+}
+
+.about-text p{
+    color:#aaa;
+    line-height:1.9;
+    margin-top:20px;
+}
+
+.about-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:32px;
+}
+
+.stat{
+    padding:20px 12px;
+    border:1px solid var(--line);
+    background:#131010;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    color:var(--gold);
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
+}
+
+.stat span{
+    display:block;
+    color:#777;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:5px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#080707;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:50px;
+}
+
+.service-card{
+    position:relative;
+    padding:34px 28px;
+    min-height:255px;
+    background:linear-gradient(145deg,#151111,#0d0b0b);
+    border:1px solid #262020;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+}
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    right:-60px;
+    bottom:-60px;
+    border-radius:50%;
+    background:rgba(215,173,98,.07);
+}
+
+.service-number{
+    color:#4d4743;
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.service-icon{
+    font-size:32px;
+    margin-bottom:17px;
+}
+
+.service-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:29px;
+    margin-bottom:9px;
+}
+
+.service-card p{
+    color:#8f8883;
+    font-size:13px;
+    line-height:1.75;
+}
+
+/* ================= FEATURE STRIP ================= */
+
+.feature-strip{
+    padding:25px 0;
+    background:var(--gold);
+    color:#080707;
+}
+
+.feature-strip-inner{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.strip-item{
+    text-align:center;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* ================= BRIDAL ================= */
+
+.bridal{
+    position:relative;
+    background:
+    linear-gradient(90deg,rgba(8,7,7,.97) 15%,rgba(8,7,7,.82) 55%,rgba(8,7,7,.35)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.bridal-content{
+    max-width:700px;
+}
+
+.bridal-content p{
+    color:#bbb;
+    line-height:1.9;
+    margin:22px 0 30px;
+}
+
+.bridal-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-bottom:30px;
+}
+
+.point{
+    border:1px solid var(--line);
+    padding:11px 15px;
+    font-size:12px;
+    color:#ddd;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#0e0c0c;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:245px;
+    gap:11px;
+    margin-top:50px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    background:#171313;
+}
+
+.gallery-item:first-child{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 2;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:end;
+    padding:22px;
+    background:linear-gradient(transparent,rgba(0,0,0,.7));
+    opacity:0;
+    transition:.3s;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+.gallery-overlay span{
+    color:white;
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+    background:#080707;
+}
+
+.review-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:48px;
+}
+
+.review-score{
+    text-align:right;
+}
+
+.review-score strong{
+    display:block;
+    font-family:"Cormorant Garamond",serif;
+    font-size:58px;
+    line-height:.8;
+}
+
+.review-score span{
+    color:#777;
+    font-size:12px;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.review-card{
+    padding:29px;
+    background:#111010;
+    border:1px solid #242020;
+}
+
+.review-stars{
+    color:var(--gold);
+    letter-spacing:3px;
+    margin-bottom:17px;
+}
+
+.review-card p{
+    color:#b4aeaa;
+    font-size:14px;
+    line-height:1.8;
+    min-height:100px;
+}
+
+.reviewer{
+    border-top:1px solid #292424;
+    padding-top:17px;
+    margin-top:20px;
+}
+
+.reviewer strong{
+    display:block;
+    font-size:14px;
+}
+
+.reviewer span{
+    color:#666;
+    font-size:11px;
+}
+
+/* ================= ACADEMY ================= */
+
+.academy{
+    background:
+    linear-gradient(rgba(10,8,8,.93),rgba(10,8,8,.97)),
+    url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=90");
+    background-size:cover;
+    background-position:center;
+}
+
+.academy-box{
+    max-width:760px;
+}
+
+.academy-box p{
+    color:#aaa;
+    line-height:1.9;
+    margin:22px 0 28px;
+}
+
+.course-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-bottom:30px;
+}
+
+.course{
+    border:1px solid var(--line);
+    padding:12px 16px;
+    color:#ddd;
+    font-size:12px;
+}
+
+/* ================= LOCATION ================= */
+
+.location{
+    background:#0e0c0c;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:45px;
+}
+
+.location-card{
+    padding:38px;
+    background:#121010;
+    border:1px solid #272222;
+}
+
+.location-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.location-card p{
+    color:#999;
+    line-height:1.9;
+}
+
+.contact-line{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+    align-items:flex-start;
+}
+
+.contact-icon{
+    color:var(--gold);
+    font-size:19px;
+}
+
+.contact-line div:last-child{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.map-box{
+    min-height:360px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1524666041070-9f4b5e3f7b3f?auto=format&fit=crop&w=1200&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:100px 0;
+    text-align:center;
+    background:
+    radial-gradient(circle at center,rgba(215,173,98,.13),transparent 45%),
+    #090808;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.cta h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(46px,6vw,76px);
+    line-height:.95;
+    margin-bottom:17px;
+}
+
+.cta p{
+    color:#888;
+    margin-bottom:30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050505;
+    padding:65px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:45px;
+}
+
+.footer-brand p{
+    max-width:400px;
+    color:#6f6965;
+    line-height:1.8;
+    margin-top:15px;
+    font-size:13px;
+}
+
+.footer h4{
+    color:var(--gold);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.footer a,
+.footer p{
+    display:block;
+    color:#777;
+    font-size:13px;
+    margin-bottom:10px;
+    transition:.2s;
+}
+
+.footer a:hover{
+    color:var(--gold);
+}
+
+.copyright{
+    border-top:1px solid #1c1919;
+    padding-top:23px;
+    text-align:center;
+    color:#4e4946;
+    font-size:11px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:59px;
+    height:59px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(10px);
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(560px,100%);
+    max-height:92vh;
+    overflow:auto;
+    background:#121010;
+    border:1px solid var(--line);
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    top:12px;
+    right:20px;
+    color:#888;
+    font-size:29px;
+    cursor:pointer;
+}
+
+.close:hover{
+    color:white;
+}
+
+.modal-box h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:40px;
+    margin-bottom:23px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    color:#777;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px;
+    color:white;
+    background:#090808;
+    border:1px solid #292424;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--gold);
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        position:absolute;
+        left:0;
+        top:82px;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:12px 20px 22px;
+        background:#090808;
+        border-top:1px solid #222;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:13px 0;
+    }
+
+    .nav-cta{
+        text-align:center;
+        margin-top:8px;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about-grid,
+    .location-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature-strip-inner{
+        grid-template-columns:1fr 1fr;
+        row-gap:14px;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .logo{
+        font-size:25px;
+    }
+
+    .hero{
+        min-height:92vh;
+        background-position:62% center;
+    }
+
+    .hero h1{
+        font-size:60px;
+        letter-spacing:-1px;
+    }
+
+    .hero-subtitle{
+        font-size:14px;
+    }
+
+    .hero-scroll{
+        display:none;
+    }
+
+    .hero-proof{
+        margin-top:32px;
+    }
+
+    .about-image{
+        min-height:390px;
+    }
+
+    .about-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .service-grid,
+    .review-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:165px;
+    }
+
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+    .gallery-item:nth-child(4){
+        grid-column:span 1;
+    }
+
+    .review-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .review-score{
+        text-align:left;
+    }
+
+    .modal-box{
+        padding:27px 19px;
+    }
+
+    .modal-box h2{
+        font-size:34px;
+    }
+
+    .location-card{
+        padding:27px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header id="header">
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+Glitters <span>& Glam</span>
+</a>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#bridal">Bridal</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#academy">Academy</a>
+<a href="#contact">Contact</a>
+
+<a href="#" class="nav-cta" onclick="openModal();return false;">
+Book Appointment
+</a>
+
+</nav>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="eyebrow">
+Makeup Studio • Beauty Salon • Bridal
+</div>
+
+<h1>
+Beauty That<br>
+Feels <span>Like You.</span>
+</h1>
+
+<p class="hero-subtitle">
+Welcome to Glitters & Glam-Pro Makeup Studio & Beauty Salon —
+a premium beauty destination in Mahanagar, Lucknow, where expert
+makeup artistry, modern styling and thoughtful beauty care come together.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#services" class="btn btn-gold">
+Explore Services →
+</a>
+
+<a href="#" class="btn btn-outline" onclick="openModal();return false;">
+Book Your Appointment
+</a>
+
+</div>
+
+<div class="hero-proof">
+
+<div>
+<div class="stars">★★★★★</div>
+</div>
+
+<div>
+<strong>4.9</strong>
+<small> / 5 · 339 Reviews</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-scroll">
+Scroll to explore
+</div>
+
+</section>
+
+
+<!-- ================= FEATURE STRIP ================= -->
+
+<div class="feature-strip">
+
+<div class="container feature-strip-inner">
+
+<div class="strip-item">✦ Professional Makeup</div>
+<div class="strip-item">✦ Bridal Beauty</div>
+<div class="strip-item">✦ Expert Styling</div>
+<div class="strip-item">✦ Mahanagar, Lucknow</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image reveal">
+
+<img
+src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=90"
+alt="Glitters and Glam beauty salon"
+loading="lazy"
+>
+
+</div>
+
+<div class="about-text reveal">
+
+<div class="section-label">
+The Glitters & Glam Experience
+</div>
+
+<h2 class="section-title">
+More Than Beauty.<br>
+It's Your <span class="gold">Moment.</span>
+</h2>
+
+<p>
+At Glitters & Glam-Pro Makeup Studio & Beauty Salon, every look is
+created with attention to detail, personal style and the occasion
+that matters to you.
+</p>
+
+<p>
+From everyday beauty care to bridal transformations, our focus is
+to create an experience that feels professional, comfortable and
+beautiful from start to finish.
+</p>
+
+<div class="about-stats">
+
+<div class="stat">
+<strong>4.9★</strong>
+<span>Google Rating</span>
+</div>
+
+<div class="stat">
+<strong>339+</strong>
+<span>Reviews</span>
+</div>
+
+<div class="stat">
+<strong>10:30</strong>
+<span>Opens Daily</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="center reveal">
+
+<div class="section-label">
+Our Services
+</div>
+
+<h2 class="section-title">
+Designed For Your<br>
+<span class="gold">Best Look.</span>
+</h2>
+
+<p class="section-desc">
+From hair and makeup to complete event-ready beauty,
+discover professional services tailored around you.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service-card reveal">
+<div class="service-number">01</div>
+<div class="service-icon">💄</div>
+<h3>Makeup</h3>
+<p>
+Professional makeup looks created for parties, occasions,
+photoshoots and memorable moments.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-number">02</div>
+<div class="service-icon">👰</div>
+<h3>Bridal Makeup</h3>
+<p>
+Elegant bridal beauty with a personalized approach for your
+most important celebration.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-number">03</div>
+<div class="service-icon">✂️</div>
+<h3>Hair Styling</h3>
+<p>
+Modern cuts, styling and finishing designed to complement
+your face, outfit and occasion.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-number">04</div>
+<div class="service-icon">🧴</div>
+<h3>Hair Spa</h3>
+<p>
+Relaxing hair-care treatments focused on a fresh,
+healthy-looking finish.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-number">05</div>
+<div class="service-icon">✨</div>
+<h3>Beauty Care</h3>
+<p>
+Beauty and grooming services designed to keep you feeling
+fresh, polished and confident.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-number">06</div>
+<div class="service-icon">💎</div>
+<h3>Event Glam</h3>
+<p>
+Complete makeup and styling for parties, celebrations,
+functions and special events.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BRIDAL ================= -->
+
+<section class="bridal" id="bridal">
+
+<div class="container">
+
+<div class="bridal-content reveal">
+
+<div class="section-label">
+Bridal & Special Occasions
+</div>
+
+<h2 class="section-title">
+Your Big Day.<br>
+Your <span class="gold">Signature Look.</span>
+</h2>
+
+<p>
+Your wedding look should feel like you — only elevated.
+Our bridal beauty service focuses on polished makeup,
+elegant styling and a look designed around your personality,
+outfit and occasion.
+</p>
+
+<div class="bridal-points">
+
+<div class="point">Bridal Makeup</div>
+<div class="point">Hair Styling</div>
+<div class="point">Event Makeup</div>
+<div class="point">Personalized Looks</div>
+
+</div>
+
+<a href="#" class="btn btn-gold"
+onclick="openModal('Bridal Makeup');return false;">
+Enquire For Bridal →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="center reveal">
+
+<div class="section-label">
+Our Work
+</div>
+
+<h2 class="section-title">
+Beauty In <span class="gold">Every Detail.</span>
+</h2>
+
+<p class="section-desc">
+A glimpse into the world of beauty, styling and transformation
+at Glitters & Glam.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=90"
+alt="Makeup studio"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Makeup Artistry</span>
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=90"
+alt="Hair styling"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Hair Styling</span>
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=90"
+alt="Beauty makeup"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Beauty</span>
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=90"
+alt="Salon beauty"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Salon Experience</span>
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=90"
+alt="Makeup artist"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Makeup Looks</span>
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=90"
+alt="Professional salon"
+loading="lazy"
+>
+
+<div class="gallery-overlay">
+<span>Professional Styling</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="review-header reveal">
+
+<div>
+
+<div class="section-label">
+Client Love
+</div>
+
+<h2 class="section-title">
+Loved By <span class="gold">339+ Clients.</span>
+</h2>
+
+</div>
+
+<div class="review-score">
+
+<div class="stars">★★★★★</div>
+
+<strong>4.9</strong>
+
+<span>Google Rating · 339 Reviews</span>
+
+</div>
+
+</div>
+
+
+<div class="review-grid">
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“Ambience 💯 Service 💯 Staff 💯 New go to place in town ❤️
+Will come again soon.”
+</p>
+
+<div class="reviewer">
+<strong>Google Customer</strong>
+<span>Verified Review</span>
+</div>
+
+</div>
+
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“Best service and best working in progress in work.
+All team members are very professional.”
+</p>
+
+<div class="reviewer">
+<strong>Google Customer</strong>
+<span>Verified Review</span>
+</div>
+
+</div>
+
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“A perfect place with an easily approachable location.”
+</p>
+
+<div class="reviewer">
+<strong>Google Customer</strong>
+<span>Verified Review</span>
+</div>
+
+</div>
+
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“The makeup was absolutely flawless, elegant and long-lasting.
+Very professional experience.”
+</p>
+
+<div class="reviewer">
+<strong>Divyanshi Tripathi</strong>
+<span>Customer Review</span>
+</div>
+
+</div>
+
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“Clean, professional and prompt. Great consultation and
+excellent attention to detail.”
+</p>
+
+<div class="reviewer">
+<strong>Iram Lalima</strong>
+<span>Customer Review</span>
+</div>
+
+</div>
+
+
+<div class="review-card reveal">
+
+<div class="review-stars">★★★★★</div>
+
+<p>
+“Fantastic job for my Haldi and Wedding makeup. They listened
+to what I wanted and were very helpful.”
+</p>
+
+<div class="reviewer">
+<strong>Emi B</strong>
+<span>Customer Review</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ACADEMY ================= -->
+
+<section class="academy" id="academy">
+
+<div class="container">
+
+<div class="academy-box reveal">
+
+<div class="section-label">
+Learn Beauty. Build Your Future.
+</div>
+
+<h2 class="section-title">
+Turn Your Passion<br>
+Into <span class="gold">Skill.</span>
+</h2>
+
+<p>
+Interested in learning professional makeup and beauty techniques?
+Enquire about available training and courses at Glitters & Glam.
+</p>
+
+<div class="course-list">
+
+<div class="course">Professional Makeup</div>
+<div class="course">Bridal Makeup</div>
+<div class="course">Hair Styling</div>
+<div class="course">Beauty Techniques</div>
+<div class="course">Salon Skills</div>
+
+</div>
+
+<a href="#" class="btn btn-gold"
+onclick="openModal('Academy Course Enquiry');return false;">
+Enquire About Courses →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location" id="contact">
+
+<div class="container">
+
+<div class="center reveal">
+
+<div class="section-label">
+Visit Us
+</div>
+
+<h2 class="section-title">
+Find <span class="gold">Glitters & Glam.</span>
+</h2>
+
+<p class="section-desc">
+Conveniently located in Mahanagar, Lucknow.
+Plan your visit or contact us for an appointment.
+</p>
+
+</div>
+
+
+<div class="location-grid">
+
+<div class="location-card reveal">
+
+<h3>
+Glitters & Glam-Pro
+</h3>
+
+<div class="contact-line">
+
+<div class="contact-icon">📍</div>
+
+<div>
+Parza Plaza, M-8,<br>
+Near Happy Home, Gole Market,<br>
+Mahanagar, Lucknow,<br>
+Uttar Pradesh 226006
+</div>
+
+</div>
+
+
+<div class="contact-line">
+
+<div class="contact-icon">📞</div>
+
+<div>
+<a href="tel:09335936670">
+093359 36670
+</a>
+</div>
+
+</div>
+
+
+<div class="contact-line">
+
+<div class="contact-icon">🕙</div>
+
+<div>
+Opens at 10:30 AM
+</div>
+
+</div>
+
+
+<div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Glitters+and+Glam-Pro+Makeup+Studio+Beauty+Salon+Parza+Plaza+Mahanagar+Lucknow"
+target="_blank"
+rel="noopener"
+class="btn btn-gold"
+>
+Get Directions →
+</a>
+
+<a
+href="tel:09335936670"
+class="btn btn-outline"
+>
+Call Now
+</a>
+
+</div>
+
+</div>
+
+
+<div class="map-box reveal">
+
+<div>
+
+<div style="font-size:42px;margin-bottom:10px;">📍</div>
+
+<h3 style="font-family:'Cormorant Garamond';font-size:32px;">
+Mahanagar, Lucknow
+</h3>
+
+<p style="color:#aaa;margin:9px 0 22px;">
+Parza Plaza · Gole Market
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Glitters+and+Glam-Pro+Makeup+Studio+Beauty+Salon+Parza+Plaza+Mahanagar+Lucknow"
+target="_blank"
+rel="noopener"
+class="btn btn-outline"
+>
+Open Google Maps
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container reveal">
+
+<div class="section-label">
+Your Beauty Moment Starts Here
+</div>
+
+<h2>
+Ready To Feel<br>
+<span class="gold">Beautiful?</span>
+</h2>
+
+<p>
+Book an appointment or enquire about your next beauty experience.
+</p>
+
+<a
+href="#"
+onclick="openModal();return false;"
+class="btn btn-gold"
+>
+Book Appointment →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo">
+Glitters <span>& Glam</span>
+</div>
+
+<p>
+Glitters & Glam-Pro Makeup Studio & Beauty Salon —
+professional makeup, bridal beauty, hair styling and
+beauty services in Mahanagar, Lucknow.
+</p>
+
+</div>
+
+
+<div class="footer">
+
+<h4>Explore</h4>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#bridal">Bridal</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+
+</div>
+
+
+<div class="footer">
+
+<h4>Contact</h4>
+
+<p>Mahanagar, Lucknow</p>
+<p>Parza Plaza, M-8</p>
+<p>093359 36670</p>
+<p>Opens 10:30 AM</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+© 2026 Glitters & Glam-Pro Makeup Studio & Beauty Salon. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919335936670"
+target="_blank"
+rel="noopener"
+aria-label="Chat on WhatsApp"
+>
+✆
+</a>
+
+
+<!-- ================= APPOINTMENT MODAL ================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="close" onclick="closeModal()">×</div>
+
+<h2>
+Book Your <span class="gold">Appointment</span>
+</h2>
+
+<form id="appointmentForm">
+
+<div class="form-group">
+
+<label>YOUR NAME</label>
+
+<input
+type="text"
+id="name"
+required
+placeholder="Enter your name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>PHONE NUMBER</label>
+
+<input
+type="tel"
+id="phone"
+required
+placeholder="Enter phone number"
+pattern="[0-9+\-\s]{8,15}"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>SERVICE</label>
+
+<select id="service" required>
+
+<option value="">Select a service</option>
+
+<option>Makeup</option>
+<option>Bridal Makeup</option>
+<option>Hair Styling</option>
+<option>Hair Spa</option>
+<option>Beauty Care</option>
+<option>Event Glam</option>
+<option>Academy Course Enquiry</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>PREFERRED DATE / TIME</label>
+
+<input
+type="text"
+id="date"
+placeholder="Example: 15 September, 5 PM"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>MESSAGE</label>
+
+<textarea
+id="message"
+placeholder="Tell us anything else..."
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-gold"
+style="width:100%;border:0;"
+>
+Send Enquiry on WhatsApp →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ================= HEADER ================= */
+
+window.addEventListener("scroll",function(){
+
+const header=document.getElementById("header");
+
+if(window.scrollY>30){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+
+});
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+document.getElementById("navLinks").classList.toggle("active");
+
+}
+
+
+/* ================= MODAL ================= */
+
+function openModal(serviceName){
+
+const modal=document.getElementById("modal");
+
+modal.classList.add("active");
+
+document.body.classList.add("modal-open");
+
+if(serviceName){
+
+const service=document.getElementById("service");
+
+for(let option of service.options){
+
+if(option.value===serviceName){
+service.value=serviceName;
+break;
+}
+
+}
+
+}
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").classList.remove("active");
+
+document.body.classList.remove("modal-open");
+
+}
+
+
+/* Close modal by clicking outside */
+
+document.getElementById("modal").addEventListener("click",function(e){
+
+if(e.target===this){
+closeModal();
+}
+
+});
+
+
+/* Escape key */
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Escape"){
+closeModal();
+}
+
+});
+
+
+/* ================= WHATSAPP BOOKING ================= */
+
+document.getElementById("appointmentForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const service=document.getElementById("service").value;
+const date=document.getElementById("date").value.trim();
+const message=document.getElementById("message").value.trim();
+
+const studioNumber="919335936670";
+
+const whatsappText=
+"Hello Glitters & Glam-Pro Makeup Studio & Beauty Salon,%0A%0A"+
+"*Appointment Enquiry*%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Service: "+encodeURIComponent(service)+"%0A"+
+"Preferred Date/Time: "+encodeURIComponent(date)+"%0A"+
+"Message: "+encodeURIComponent(message);
+
+window.open(
+"https://wa.me/"+studioNumber+"?text="+whatsappText,
+"_blank"
+);
+
+closeModal();
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer=new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},
+
+{
+threshold:.10
+}
+
+);
+
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+observer.observe(el);
+
+});
+
+
+/* ================= MOBILE MENU CLOSE ================= */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+link.addEventListener("click",function(){
+
+document.getElementById("navLinks").classList.remove("active");
+
+});
+
+});
+
+
+/* ================= CURRENT YEAR ================= */
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.innerHTML=
+"© "+new Date().getFullYear()+
+" Glitters & Glam-Pro Makeup Studio & Beauty Salon. All Rights Reserved.";
+
+}
+
+</script>
+
+</body>
+</html>
